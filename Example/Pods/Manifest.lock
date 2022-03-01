@@ -1,0 +1,16 @@
+PODS:
+  - ZLNavigation (0.1.0)
+
+DEPENDENCIES:
+  - ZLNavigation (from `../`)
+
+EXTERNAL SOURCES:
+  ZLNavigation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZLNavigation: 756b80aba49b8967b347b7d8e2035efd05bd95fb
+
+PODFILE CHECKSUM: be6da289b0159eabf22b7312844acdbfa742bb23
+
+COCOAPODS: 1.11.2
