@@ -28,11 +28,12 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhangzongyu00/ZLNavigation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
+
+  s.static_framework = true
 
   s.source_files = 'ZLNavigation/Classes/**/*'
   
-  # apikey：15f252085c1875f2c96429e37a437568
   s.dependency 'AMap3DMap-NO-IDFA', '~> 8.1.0'
   s.dependency 'AMapSearch-NO-IDFA', '~> 8.1.0'
   s.dependency 'AMapLocation-NO-IDFA', '~> 2.8.0'
