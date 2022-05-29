@@ -9,14 +9,25 @@ import UIKit
 import AMapFoundationKit
 import MAMapKit
 
+//MARK: 高德地图调用VC
+
 public class ZLNavigation: UIViewController {
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         
+        // APIkey需要自行获取，此处仅为示例
+        #if DEBUG
         AMapServices.shared().apiKey = "15f252085c1875f2c96429e37a437568"
+        #else
+        AMapServices.shared().apiKey = ""
+        #endif
+        
+        // 更新协议，8.1.0版本开始
         MAMapView.updatePrivacyAgree(.didAgree)
         MAMapView.updatePrivacyShow(.didShow, privacyInfo: .didContain)
+        // 打开https开关
         AMapServices.shared().enableHTTPS = true
 
         let mapView = MAMapView(frame: self.view.bounds)
@@ -33,8 +44,8 @@ public class ZLNavigation: UIViewController {
         mapView.zoomLevel = 11
         mapView.isRotateEnabled = false
         self.view.addSubview(mapView)
-        
     }
+    
 }
 
 extension ZLNavigation : MAMapViewDelegate {
